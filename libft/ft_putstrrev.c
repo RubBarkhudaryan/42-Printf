@@ -3,39 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstrrev.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbarkhud <rbarkhud@student.42yerevan.am    +#+  +:+       +#+        */
+/*   By: rbarkhud <rbarkhud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 19:45:27 by rbarkhud          #+#    #+#             */
-/*   Updated: 2025/02/09 19:45:27 by rbarkhud         ###   ########.fr       */
+/*   Created: 2025/02/10 17:56:57 by rbarkhud          #+#    #+#             */
+/*   Updated: 2025/02/10 18:55:56 by rbarkhud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-static void	ft_putstrrev(const char *str)
+void	ft_putstrrev(char *s)
 {
-	int	i;
+	int	len;
 
-	i = ft_strlen(str) - 1;
-	while (i >= 0)
+	len = ft_strlen(s) - 1;
+	while (len >= 0)
 	{
-		ft_putchar(str[i]);
-		--i;
+		ft_putchar(s[len]);
+		--len;
 	}
-}
-
-int	ft_putnbr(long num)
-{
-	char	str_num[25];
-	char	digit;
-	int		len;
-
-	while (num)
-	{
-		digit = (num % 10) + '0';
-		num %= 10;
-		str_num[len++] = digit;
-	}
-	ft_putstrrev(str_num);
-	return (len);
 }

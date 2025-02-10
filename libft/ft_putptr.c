@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbarkhud <rbarkhud@student.42yerevan.am    +#+  +:+       +#+        */
+/*   By: rbarkhud <rbarkhud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 19:44:41 by rbarkhud          #+#    #+#             */
-/*   Updated: 2025/02/09 19:44:41 by rbarkhud         ###   ########.fr       */
+/*   Created: 2025/02/10 17:56:40 by rbarkhud          #+#    #+#             */
+/*   Updated: 2025/02/10 18:46:15 by rbarkhud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putstr(const char *str)
+int	ft_putptr(unsigned long long num)
 {
-	write(1, str, ft_strlen(str));
-	return (ft_strlen(str));
+	int	bytes;
+
+	bytes = ft_putstr("0x");
+	bytes += ft_puthex(num, 0);
+	return (bytes);
 }

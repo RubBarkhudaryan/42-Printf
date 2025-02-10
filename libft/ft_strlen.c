@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strle.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbarkhud <rbarkhud@student.42yerevan.am    +#+  +:+       +#+        */
+/*   By: rbarkhud <rbarkhud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 19:43:11 by rbarkhud          #+#    #+#             */
-/*   Updated: 2025/02/09 19:43:11 by rbarkhud         ###   ########.fr       */
+/*   Created: 2025/02/10 17:57:03 by rbarkhud          #+#    #+#             */
+/*   Updated: 2025/02/10 17:57:04 by rbarkhud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {
-	int	i;
+	int	length;
 
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
+	length = 0;
+	while (str[length] != '\0')
+		++length;
+	return (length);
 }
